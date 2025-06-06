@@ -1,5 +1,5 @@
 /* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 /* --- THEME DEFINITION (CSS Variables) --- */
 :root {
@@ -11,7 +11,7 @@
     --card-background: rgba(44, 44, 44, 0.6);
     --border-color: rgba(255, 255, 255, 0.1);
     --shadow-color: rgba(0, 0, 0, 0.5);
-    --font-family: 'Poppins', sans-serif;
+    --font-family: 'Inter', sans-serif;
 }
 
 /* --- GENERAL STYLES --- */
@@ -29,9 +29,37 @@ body {
 header {
     background: linear-gradient(135deg, var(--primary-orange), #ff9a40);
     color: var(--text-primary);
-    padding: 2em 1em;
+    padding: 1.5em 1em;
     text-align: center;
     border-bottom: 4px solid var(--primary-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
 }
 
 header h1 {
@@ -113,7 +141,7 @@ a.tweet-card {
     color: inherit;
 }
 
-.tweet-card {
+.tweet-card, .contribution-item {
     background: var(--card-background);
     border: 1px solid var(--border-color);
     border-radius: 10px;
@@ -122,10 +150,13 @@ a.tweet-card {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Set initial state for animation */
+    opacity: 0;
+    transform: translateY(20px);
     animation: fadeIn 0.5s ease-out forwards;
 }
 
-.tweet-card:hover {
+.tweet-card:hover, .contribution-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px 0 var(--shadow-color);
 }
@@ -201,13 +232,19 @@ a.tweet-card {
     background-color: var(--light-background);
 }
 
+#contributions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
 .contribution-item {
-    margin-bottom: 1em;
-    padding: 1em;
+    margin-bottom: 0; /* Removed to use gap property */
+    padding: 1.5em;
     border-left: 4px solid var(--primary-orange);
     background-color: var(--card-background);
-    border-radius: 0 8px 8px 0;
-    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .contribution-item:hover {

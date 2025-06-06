@@ -35,12 +35,14 @@ function renderTweets(tweets) {
         return;
     }
 
-    tweets.forEach(tweet => {
+    tweets.forEach((tweet, index) => {
         const card = document.createElement('a');
         card.className = 'tweet-card';
         card.href = `https://x.com/${tweet.author.username}/status/${tweet.id}`;
         card.target = '_blank';
         card.rel = 'noopener noreferrer';
+        // Add staggered animation delay
+        card.style.animationDelay = `${index * 100}ms`;
 
         // Create the card's inner structure
         card.innerHTML = `
