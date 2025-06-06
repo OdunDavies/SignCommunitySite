@@ -33,11 +33,9 @@ app.get('/api/tweets', async (req, res) => {
         return res.status(500).json({ error: 'Twitter Bearer Token not configured on the server.' });
     }
 
-    // This is the ID for the community: @https://x.com/i/communities/1808883915714933045
-    // We can search for tweets that contain a link to this community page.
-    const communityUrl = "url:\"1808883915714933045\"";
-    const query = `${communityUrl} -is:retweet`; // Search for the URL, exclude retweets
-    const url = `https://api.twitter.com/2/tweets/search/recent?query=${encodeURIComponent(query)}&tweet.fields=created_at,author_id,public_metrics&expansions=author_id&user.fields=profile_image_url,username,name`;
+    // This is the user ID for @sign on Twitter/X
+    const userId = "1552554683546714112";
+    const url = `https://api.twitter.com/2/users/${userId}/tweets?max_results=20&tweet.fields=created_at,author_id,public_metrics&expansions=author_id&user.fields=profile_image_url,username,name`;
 
     try {
         const response = await axios.get(url, {

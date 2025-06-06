@@ -107,6 +107,12 @@ section h2 {
     gap: 1.5em;
 }
 
+/* Make the entire card a clickable link without changing text color */
+a.tweet-card {
+    text-decoration: none;
+    color: inherit;
+}
+
 .tweet-card {
     background: var(--card-background);
     border: 1px solid var(--border-color);
@@ -135,8 +141,39 @@ section h2 {
     }
 }
 
-.tweet-card p {
+.tweet-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.tweet-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid var(--primary-orange);
+}
+
+.tweet-author-info p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.tweet-author-name {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.tweet-author-handle {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+}
+
+.tweet-text {
     margin: 0 0 1em 0;
+    color: var(--text-secondary);
+    font-weight: 300;
 }
 
 .tweet-card .tweet-author {
@@ -149,6 +186,13 @@ section h2 {
     font-size: 0.8em;
     color: var(--text-secondary);
     opacity: 0.7;
+    text-align: right;
+}
+
+.error-message {
+    color: var(--text-secondary);
+    text-align: center;
+    width: 100%;
 }
 
 /* --- CONTRIBUTIONS --- */
