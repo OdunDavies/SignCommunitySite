@@ -4,43 +4,223 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Protocol Community Hub</title>
-    <link rel="icon" href="https://pbs.twimg.com/profile_images/1792942481735954432/uM0L2TX4_400x400.jpg" type="image/x-icon">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <header>
-        <img src="https://pbs.twimg.com/profile_images/1792942481735954432/uM0L2TX4_400x400.jpg" alt="Sign Protocol Logo" class="header-logo">
-        <h1>Sign Protocol Community Hub</h1>
+        <div class="header-content">
+            <img src="assets/images/logo.png" alt="Sign Protocol Logo" class="header-logo">
+            <h1>Sign Protocol Community Hub</h1>
+            <p>The Attestation Layer of the Internet</p>
+        </div>
     </header>
-    <main>
-        <section id="project-description">
-            <h2>The Attestation Layer of the Internet</h2>
-            <p>Sign Protocol is a base layer for attestations, providing a universal, permissionless, and decentralized platform for verifying any information, anywhere. It's the ultimate source of truth on the internet.</p>
-            <div class="social-links">
-                <a href="https://x.com/sign" target="_blank" title="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://discord.gg/signs" target="_blank" title="Discord"><i class="fa-brands fa-discord"></i></a>
-                <a href="https://warpcast.com/~/channel/sign" target="_blank" title="Warpcast"><i class="fa-solid fa-satellite-dish"></i></a>
-                <a href="https://github.com/sign-protocol" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
-        </section>
 
-        <section id="community-tweets">
-            <h2>Latest from @sign</h2>
-            <div class="tweet-card-container">
-                <!-- Tweets will be loaded here -->
-            </div>
-        </section>
+    <main class="main-container">
+        <div class="main-content">
+            <section id="project-description">
+                <p>Sign Protocol is a base layer for attestations, providing a universal, permissionless, and decentralized platform for verifying any information, anywhere. It's the ultimate source of truth on the internet.</p>
+                <div class="social-links">
+                    <a href="https://x.com/sign" target="_blank" title="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://discord.gg/signs" target="_blank" title="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://warpcast.com/~/channel/sign" target="_blank" title="Warpcast"><i class="fa-solid fa-satellite-dish"></i></a>
+                    <a href="https://github.com/sign-protocol" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </section>
 
-        <section id="my-contributions">
-            <h2>My Contributions</h2>
-            <div id="contributions-container">
-                <!-- Contributions will be loaded here -->
-            </div>
-        </section>
+            <section id="twitter-feed" class="twitter-feed">
+                <h2>Latest Updates</h2>
+                <div class="tweet-card-container">
+                    <!-- Tweets will be dynamically inserted here -->
+                </div>
+            </section>
+
+            <section id="threadors" class="threadors">
+                <h2>Community Creators</h2>
+                <div id="threadors-container" class="threadors-container">
+                    <!-- Threador cards will be dynamically inserted here -->
+                </div>
+            </section>
+
+            <section id="my-contributions" class="my-contributions">
+                <h2>My Contributions</h2>
+                
+                <!-- Twitter Profile Card -->
+                <div class="contributor-profile">
+                    <div class="profile-info">
+                        <div class="profile-header">
+                            <img src="https://unavatar.io/twitter/emlord_01" alt="Profile Picture" class="profile-image">
+                            <div class="profile-text">
+                                <h3>Emlord</h3>
+                                <a href="https://x.com/emlord_01?s=21" class="username" target="_blank">@emlord_01</a>
+                                <p class="bio">Sign Protocol Community Contributor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contributions-container">
+                    <!-- Contributions will be dynamically inserted here -->
+                </div>
+
+                <!-- Image Gallery -->
+                <div class="artwork-container">
+                    <h3>My Artwork & Contributions</h3>
+                    <div class="artwork-grid">
+                        <div class="artwork-item">
+                            <img src="assets/images/contributions/art1.jpg" alt="Contribution Art 1">
+                            <h4>Community Art #1</h4>
+                            <p>Sign Protocol Community Artwork</p>
+                            <span class="date">January 2024</span>
+                        </div>
+                        <div class="artwork-item">
+                            <img src="assets/images/contributions/art2.jpg" alt="Contribution Art 2">
+                            <h4>Community Art #2</h4>
+                            <p>Sign Protocol Community Artwork</p>
+                            <span class="date">February 2024</span>
+                        </div>
+                        <div class="artwork-item">
+                            <img src="assets/images/contributions/art3.jpg" alt="Contribution Art 3">
+                            <h4>Community Art #3</h4>
+                            <p>Sign Protocol Community Artwork</p>
+                            <span class="date">March 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <aside class="sidebar">
+            <section id="affiliates" class="affiliates">
+                <h2>Sign Affiliates</h2>
+                <div class="affiliates-container">
+                    <!-- Affiliate Card 1 -->
+                    <div class="affiliate-card">
+                        <div class="affiliate-main">
+                            <img src="https://unavatar.io/twitter/sign" alt="Sign Protocol" class="affiliate-avatar">
+                            <div class="affiliate-info">
+                                <div class="affiliate-header">
+                                    <div class="affiliate-names">
+                                        <h3 class="affiliate-name">Sign Protocol</h3>
+                                        <span class="affiliate-handle">@sign</span>
+                                    </div>
+                                    <span class="affiliate-role">Core Team</span>
+                                </div>
+                                <p class="affiliate-bio">The Attestation Layer of the Internet. Building the ultimate source of truth.</p>
+                                <div class="affiliate-stats">
+                                    <span class="affiliate-followers">10.5K Followers</span>
+                                </div>
+                                <div class="affiliate-actions">
+                                    <a href="https://x.com/sign" target="_blank" class="follow-button">Follow</a>
+                                    <a href="https://sign.xyz" target="_blank" class="profile-button">Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Affiliate Card 2 -->
+                    <div class="affiliate-card">
+                        <div class="affiliate-main">
+                            <img src="https://unavatar.io/twitter/signdevs" alt="Sign Developers" class="affiliate-avatar">
+                            <div class="affiliate-info">
+                                <div class="affiliate-header">
+                                    <div class="affiliate-names">
+                                        <h3 class="affiliate-name">Sign Developers</h3>
+                                        <span class="affiliate-handle">@signdevs</span>
+                                    </div>
+                                    <span class="affiliate-role">Development</span>
+                                </div>
+                                <p class="affiliate-bio">Building the future of attestations. Developer updates and technical discussions.</p>
+                                <div class="affiliate-stats">
+                                    <span class="affiliate-followers">5.2K Followers</span>
+                                </div>
+                                <div class="affiliate-actions">
+                                    <a href="https://x.com/signdevs" target="_blank" class="follow-button">Follow</a>
+                                    <a href="https://docs.sign.xyz" target="_blank" class="profile-button">Docs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Affiliate Card 3 -->
+                    <div class="affiliate-card">
+                        <div class="affiliate-main">
+                            <img src="https://unavatar.io/twitter/signcommunity" alt="Sign Community" class="affiliate-avatar">
+                            <div class="affiliate-info">
+                                <div class="affiliate-header">
+                                    <div class="affiliate-names">
+                                        <h3 class="affiliate-name">Sign Community</h3>
+                                        <span class="affiliate-handle">@signcommunity</span>
+                                    </div>
+                                    <span class="affiliate-role">Community</span>
+                                </div>
+                                <p class="affiliate-bio">Join the Sign Protocol community. Events, updates, and community highlights.</p>
+                                <div class="affiliate-stats">
+                                    <span class="affiliate-followers">7.8K Followers</span>
+                                </div>
+                                <div class="affiliate-actions">
+                                    <a href="https://x.com/signcommunity" target="_blank" class="follow-button">Follow</a>
+                                    <a href="https://discord.gg/signs" target="_blank" class="profile-button">Discord</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Projects Section -->
+                    <div class="featured-projects">
+                        <h3>Featured Projects</h3>
+                        <div class="project-grid">
+                            <a href="#" class="project-card">
+                                <span class="project-icon">🔐</span>
+                                <h4>Sign Wallet</h4>
+                                <p>Secure your attestations</p>
+                            </a>
+                            <a href="#" class="project-card">
+                                <span class="project-icon">📜</span>
+                                <h4>Sign Bridge</h4>
+                                <p>Cross-chain attestations</p>
+                            </a>
+                            <a href="#" class="project-card">
+                                <span class="project-icon">🌐</span>
+                                <h4>Sign Explorer</h4>
+                                <p>Browse attestations</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Community Stats -->
+                    <div class="community-stats">
+                        <h3>Community Stats</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-value">50K+</span>
+                                <span class="stat-label">Community Members</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">1M+</span>
+                                <span class="stat-label">Attestations</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">100+</span>
+                                <span class="stat-label">Projects Built</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </aside>
     </main>
+
     <script src="js/contribution-data.js"></script>
     <script src="js/twitter.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- Image Modal/Lightbox -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img id="modalImage" class="modal-content" src="" alt="Full size image">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
 </body>
 </html> 
